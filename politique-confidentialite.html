@@ -10,7 +10,7 @@
 <main>
 <p><a href="./">← Mantrailing</a></p>
 <h1>Politique de confidentialité</h1>
-<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 16 novembre 2026</p>
+<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 16 novembre 2026 (enregistrement des pistes)</p>
 
 <p>Mantrailing est une application d'entraînement au mantrailing (pistage de personnes par un chien).
 Elle affiche sur une carte la trace GPS du collier du chien.</p>
@@ -23,6 +23,10 @@ Elle affiche sur une carte la trace GPS du collier du chien.</p>
     de l'application sur le téléphone.</li>
   <li><strong>Positions GPS du collier</strong> : téléchargées depuis Tractive pour être affichées sur la carte.
     Elles restent sur le téléphone.</li>
+  <li><strong>Position du téléphone</strong> : uniquement pendant l'enregistrement d'une piste lancé par
+    l'utilisateur (« Démarrer une piste » jusqu'à « Terminer la piste »), lorsque le GPS du téléphone est choisi
+    comme source de la trace. Une notification reste affichée pendant tout l'enregistrement, qui continue écran
+    éteint. La position n'est jamais lue en dehors d'une piste. Les pistes enregistrées restent sur le téléphone.</li>
 </ul>
 
 <h2>Partage</h2>
@@ -35,8 +39,9 @@ Elle affiche sur une carte la trace GPS du collier du chien.</p>
 <p>Les échanges se font en HTTPS. L'application ne contient ni publicité, ni outil de mesure d'audience.</p>
 
 <h2>Conservation et suppression</h2>
-<p>« Se déconnecter » dans l'application efface le jeton et le chien choisi. Désinstaller l'application supprime
-toutes ses données du téléphone. Le développeur ne détient aucune donnée à supprimer.</p>
+<p>« Se déconnecter » dans l'application efface le jeton et le chien choisi. Chaque piste peut être supprimée
+depuis « Mes pistes ». Désinstaller l'application supprime toutes ses données du téléphone. Le développeur ne
+détient aucune donnée à supprimer.</p>
 
 <h2>Contact</h2>
 <p>Pour toute question : <a href="https://github.com/djkspr/mantrailing-site/issues">ouvrir une demande sur GitHub</a>.</p>
