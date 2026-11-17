@@ -18,11 +18,15 @@ compare la trace GPS du chien à la piste posée par le traceur. Par défaut, to
 
 <h2>Données traitées</h2>
 <ul>
-  <li><strong>Identifiants Tractive</strong> (email et mot de passe) : saisis par l'utilisateur pour se connecter à
-    son compte Tractive. Ils sont envoyés uniquement aux serveurs de Tractive (graph.tractive.com) pour obtenir un
-    jeton de connexion. Le mot de passe n'est jamais enregistré. Seul le jeton est conservé, dans le stockage privé
-    de l'application sur le téléphone.</li>
-  <li><strong>Positions GPS du collier</strong> : téléchargées depuis Tractive pour être affichées sur la carte.</li>
+  <li><strong>Identifiants Tractive ou Weenect</strong> (email et mot de passe) : saisis par l'utilisateur pour se
+    connecter au compte de son collier. Ils sont envoyés uniquement aux serveurs du fabricant concerné
+    (graph.tractive.com pour Tractive, apiv4.weenect.com pour Weenect) pour obtenir un jeton de connexion. Le mot de
+    passe n'est jamais enregistré. Seul le jeton est conservé, dans le stockage privé de l'application sur le
+    téléphone.</li>
+  <li><strong>Positions GPS du collier</strong> : téléchargées depuis Tractive ou Weenect pour être affichées sur la
+    carte.</li>
+  <li><strong>Fichiers GPX importés</strong> (trace d'un GPS Garmin ou d'une autre application) : lus sur le
+    téléphone à la demande de l'utilisateur, puis traités comme une piste ou une recherche enregistrée.</li>
   <li><strong>Position du téléphone</strong> : uniquement pendant un enregistrement lancé par l'utilisateur, soit
     la pose d'une piste par le traceur (« Poser une piste » jusqu'à « Terminer la pose »), soit la recherche du
     chien lorsque le GPS du téléphone est choisi comme source (« Démarrer une recherche » jusqu'à « Terminer la
@@ -59,7 +63,8 @@ compare la trace GPS du chien à la piste posée par le traceur. Par défaut, to
 <h2>Partage</h2>
 <p>Aucune donnée n'est vendue ni partagée avec un tiers, en dehors de :</p>
 <ul>
-  <li>Tractive, pour la connexion et la récupération des positions du collier ;</li>
+  <li>Tractive et Weenect, pour la connexion et la récupération des positions du collier (seulement le fabricant
+    dont l'utilisateur connecte le compte) ;</li>
   <li>Google, pour la connexion à la sauvegarde en ligne (si elle est activée) ;</li>
   <li>o2switch, hébergeur du serveur de sauvegarde (en France) ;</li>
   <li>Open-Meteo, pour la météo (position arrondie à environ 1 km, sans identifiant) ;</li>
@@ -71,7 +76,7 @@ compare la trace GPS du chien à la piste posée par le traceur. Par défaut, to
 
 <h2>Conservation et suppression</h2>
 <p>Chaque piste ou recherche peut être supprimée depuis « Mes pistes » : la suppression est aussi faite sur le
-serveur, et pour l'équipe qui la voyait. « Se déconnecter » efface du téléphone le jeton Tractive.
+serveur, et pour l'équipe qui la voyait. « Se déconnecter » efface du téléphone le jeton Tractive ou Weenect.
 Désinstaller l'application supprime toutes ses données du téléphone.</p>
 
 <h2 id="suppression-compte">Supprimer son compte de sauvegarde</h2>
@@ -86,8 +91,8 @@ donnée personnelle : nous reprendrons contact pour vérifier le compte). Elle e
 <h2>Contact</h2>
 <p>Pour toute question : <a href="https://github.com/djkspr/mantrailing-site/issues">ouvrir une demande sur GitHub</a>.</p>
 
-<p class="muted">Mantrailing n'est ni affilié à Tractive, ni approuvé par Tractive. Tractive est une marque de ses
-propriétaires respectifs.</p>
+<p class="muted">Mantrailing n'est affilié ni à Tractive ni à Weenect, ni approuvé par eux. Tractive, Weenect et
+Garmin sont des marques de leurs propriétaires respectifs.</p>
 </main>
 </body>
 </html>
