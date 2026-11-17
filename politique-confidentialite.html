@@ -10,7 +10,7 @@
 <main>
 <p><a href="./">← Mantrailing</a></p>
 <h1>Politique de confidentialité</h1>
-<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 17 novembre 2026 (sauvegarde en ligne et équipes)</p>
+<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 17 novembre 2026 (météo)</p>
 
 <p>Mantrailing est une application d'entraînement au mantrailing (pistage de personnes par un chien) : elle
 compare la trace GPS du chien à la piste posée par le traceur. Par défaut, tout reste sur le téléphone ; la
@@ -28,6 +28,10 @@ compare la trace GPS du chien à la piste posée par le traceur. Par défaut, to
     chien lorsque le GPS du téléphone est choisi comme source (« Démarrer une recherche » jusqu'à « Terminer la
     recherche »). Une notification reste affichée pendant tout l'enregistrement, qui continue écran éteint. La
     position n'est jamais lue en dehors de ces enregistrements.</li>
+  <li><strong>Météo</strong> : à la fin d'une pose de piste ou d'une recherche, l'application demande la météo de
+    l'heure concernée (température, vent, humidité, pluie) au service Open-Meteo. Elle ne lui envoie qu'une position
+    arrondie à environ 1 km et la date, sans aucun identifiant ; la météo obtenue est enregistrée avec la piste ou la
+    recherche.</li>
   <li><strong>Pistes, recherches, notes et chiens</strong> (noms des chiens, traces GPS, notes prises pendant la
     recherche) : enregistrés sur le téléphone. Ils ne quittent le téléphone que si la sauvegarde en ligne est
     activée (ci-dessous).</li>
@@ -58,6 +62,7 @@ compare la trace GPS du chien à la piste posée par le traceur. Par défaut, to
   <li>Tractive, pour la connexion et la récupération des positions du collier ;</li>
   <li>Google, pour la connexion à la sauvegarde en ligne (si elle est activée) ;</li>
   <li>o2switch, hébergeur du serveur de sauvegarde (en France) ;</li>
+  <li>Open-Meteo, pour la météo (position arrondie à environ 1 km, sans identifiant) ;</li>
   <li>les membres des équipes que l'utilisateur rejoint, pour ce qui est fait ou partagé dans ces équipes ;</li>
   <li>les fournisseurs de fonds de carte (IGN — Géoplateforme, CARTO), qui reçoivent les demandes de tuiles de
     carte pour la zone affichée, comme tout service de carte.</li>
