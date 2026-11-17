@@ -10,10 +10,11 @@
 <main>
 <p><a href="./">← Mantrailing</a></p>
 <h1>Politique de confidentialité</h1>
-<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 16 novembre 2026 (pose des pistes et recherches)</p>
+<p class="muted">Application Android « Mantrailing » (app.mantrailing) — dernière mise à jour : 17 novembre 2026 (sauvegarde en ligne et équipes)</p>
 
-<p>Mantrailing est une application d'entraînement au mantrailing (pistage de personnes par un chien).
-Elle affiche sur une carte la trace GPS du collier du chien.</p>
+<p>Mantrailing est une application d'entraînement au mantrailing (pistage de personnes par un chien) : elle
+compare la trace GPS du chien à la piste posée par le traceur. Par défaut, tout reste sur le téléphone ; la
+<strong>sauvegarde en ligne</strong> est facultative et ne s'active que si l'utilisateur le demande.</p>
 
 <h2>Données traitées</h2>
 <ul>
@@ -21,28 +22,61 @@ Elle affiche sur une carte la trace GPS du collier du chien.</p>
     son compte Tractive. Ils sont envoyés uniquement aux serveurs de Tractive (graph.tractive.com) pour obtenir un
     jeton de connexion. Le mot de passe n'est jamais enregistré. Seul le jeton est conservé, dans le stockage privé
     de l'application sur le téléphone.</li>
-  <li><strong>Positions GPS du collier</strong> : téléchargées depuis Tractive pour être affichées sur la carte.
-    Elles restent sur le téléphone.</li>
+  <li><strong>Positions GPS du collier</strong> : téléchargées depuis Tractive pour être affichées sur la carte.</li>
   <li><strong>Position du téléphone</strong> : uniquement pendant un enregistrement lancé par l'utilisateur, soit
     la pose d'une piste par le traceur (« Poser une piste » jusqu'à « Terminer la pose »), soit la recherche du
     chien lorsque le GPS du téléphone est choisi comme source (« Démarrer une recherche » jusqu'à « Terminer la
     recherche »). Une notification reste affichée pendant tout l'enregistrement, qui continue écran éteint. La
-    position n'est jamais lue en dehors de ces enregistrements. Pistes et recherches restent sur le téléphone.</li>
+    position n'est jamais lue en dehors de ces enregistrements.</li>
+  <li><strong>Pistes, recherches, notes et chiens</strong> (noms des chiens, traces GPS, notes prises pendant la
+    recherche) : enregistrés sur le téléphone. Ils ne quittent le téléphone que si la sauvegarde en ligne est
+    activée (ci-dessous).</li>
+</ul>
+
+<h2>Sauvegarde en ligne (facultative)</h2>
+<p>Si l'utilisateur l'active dans les paramètres :</p>
+<ul>
+  <li><strong>Compte</strong> : la connexion se fait avec un compte Google. L'application reçoit de Google, et
+    transmet au serveur de Mantrailing, l'identifiant du compte, son adresse email et son nom. Le mot de passe Google
+    ne passe jamais par l'application. Le serveur rend un jeton de connexion propre à l'application, dont il ne garde
+    qu'une empreinte.</li>
+  <li><strong>Données sauvegardées</strong> : pistes, recherches (avec leurs traces GPS et leurs notes) et chiens
+    sont copiés sur le serveur de Mantrailing, hébergé en France par o2switch. Au-delà de la durée choisie dans les
+    paramètres (30 jours par défaut), une piste ou une recherche ne garde qu'un résumé sur le téléphone : elle est
+    téléchargée depuis le serveur à l'ouverture.</li>
+  <li><strong>Équipes</strong> : l'utilisateur peut créer une équipe (famille, club…) et y inviter d'autres
+    personnes avec un code. Chaque piste, recherche ou chien appartient soit à l'espace perso de l'utilisateur, visible
+    de lui seul, soit à une équipe, visible de ses seuls membres. Une équipe ne voit que ce qui a été fait ou partagé
+    en son nom, jamais l'espace perso de ses membres ni leurs autres équipes. Les membres d'une équipe voient le nom
+    des autres membres.</li>
+  <li>La synchronisation peut être limitée au Wi-Fi (réglage par défaut).</li>
 </ul>
 
 <h2>Partage</h2>
-<p>Aucune donnée n'est envoyée au développeur de l'application, ni vendue, ni partagée avec un tiers, en dehors de :</p>
+<p>Aucune donnée n'est vendue ni partagée avec un tiers, en dehors de :</p>
 <ul>
   <li>Tractive, pour la connexion et la récupération des positions du collier ;</li>
+  <li>Google, pour la connexion à la sauvegarde en ligne (si elle est activée) ;</li>
+  <li>o2switch, hébergeur du serveur de sauvegarde (en France) ;</li>
+  <li>les membres des équipes que l'utilisateur rejoint, pour ce qui est fait ou partagé dans ces équipes ;</li>
   <li>les fournisseurs de fonds de carte (IGN — Géoplateforme, CARTO), qui reçoivent les demandes de tuiles de
     carte pour la zone affichée, comme tout service de carte.</li>
 </ul>
 <p>Les échanges se font en HTTPS. L'application ne contient ni publicité, ni outil de mesure d'audience.</p>
 
 <h2>Conservation et suppression</h2>
-<p>« Se déconnecter » dans l'application efface le jeton et le chien choisi. Chaque piste peut être supprimée
-depuis « Mes pistes ». Désinstaller l'application supprime toutes ses données du téléphone. Le développeur ne
-détient aucune donnée à supprimer.</p>
+<p>Chaque piste ou recherche peut être supprimée depuis « Mes pistes » : la suppression est aussi faite sur le
+serveur, et pour l'équipe qui la voyait. « Se déconnecter » efface du téléphone le jeton Tractive.
+Désinstaller l'application supprime toutes ses données du téléphone.</p>
+
+<h2 id="suppression-compte">Supprimer son compte de sauvegarde</h2>
+<p>Dans l'application : <strong>Paramètres › Sauvegarde en ligne › Supprimer mes données en ligne</strong>. Le compte
+et l'espace perso en ligne sont supprimés immédiatement et définitivement ; l'utilisateur quitte ses équipes (ce
+qu'il y a partagé reste aux autres membres ; une équipe dont il était le dernier membre est supprimée avec son
+contenu). Les données encore présentes sur le téléphone n'y sont pas effacées.</p>
+<p>Sans accès à l'application, la suppression peut être demandée en
+<a href="https://github.com/djkspr/mantrailing-site/issues">ouvrant une demande sur GitHub</a> (sans y publier de
+donnée personnelle : nous reprendrons contact pour vérifier le compte). Elle est faite sous 30 jours.</p>
 
 <h2>Contact</h2>
 <p>Pour toute question : <a href="https://github.com/djkspr/mantrailing-site/issues">ouvrir une demande sur GitHub</a>.</p>
